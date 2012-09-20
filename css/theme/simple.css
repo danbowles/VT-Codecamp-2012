@@ -11,7 +11,7 @@
  * FONT-FACE DEFINITIONS
  *********************************************/
 
-@import url(http://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700);
 
 
 /*********************************************
@@ -53,12 +53,34 @@ body {
 .reveal h6 {
 	margin: 0 0 20px 0;
 	color: black;
-	font-family: 'News Cycle', Impact, sans-serif;
+	font-family: 'Droid Serif', Impact, sans-serif;
 	line-height: 0.9em;
-	
+	text-shadow: 0px 0px 6px rgba(0,0,0,0.2);
 	text-transform: uppercase;
 }
 
+.reveal h1 {
+	text-shadow: 	0 1px 0 #777,
+					0 2px 0 #797979,
+					0 3px 0 #888,
+					0 4px 0 #898989,
+					0 5px 0 #999,
+					0 6px 1px rgba(0,0,0,.1),
+					0 0 5px rgba(0,0,0,.1),
+					0 1px 3px rgba(0,0,0,.3),
+					0 3px 5px rgba(0,0,0,.2),
+					0 5px 10px rgba(0,0,0,.25),
+					0 20px 20px rgba(0,0,0,.15);
+}
+
+.reveal h2 {
+	text-shadow: 	
+					0 6px 1px rgba(0,0,0,.1),
+					0 0 5px rgba(0,0,0,.1),
+					0 1px 3px rgba(0,0,0,.3),
+					0 3px 5px rgba(0,0,0,.2),
+					0 5px 10px rgba(0,0,0,.25);
+}
 
 /*********************************************
  * LINKS
@@ -146,5 +168,80 @@ body {
 		     -o-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
 		        transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
 	}
+/*********************************************
+ * HEART
+ *********************************************/
+ h1 .left {
+ 	position: relative;
+ 	left: -60px;
+ }
 
+ .heart {
+ 	position: absolute;
+ 	text-indent: -99999px;
+ 	top: 24px;
+ 	left: 200px;
+ }
+.heart::before, .heart::after {
+	position: absolute;
+	content: "";
+	left: 70px;
+	top: 0;
+	width: 70px;
+	height: 110px;
+	background: #C4363E;
+	-moz-border-radius: 50px 50px 0 0;
+	border-radius: 50px 50px 0 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	transition: all;
+	box-shadow: 0 0px 10px #C4363E;
+}
 
+.beat::before, .beat::after {
+	left: 80px;
+	width: 80px;
+	height: 120px;
+}
+
+.heart::after {
+	left: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	-o-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+
+pre code {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+h2 code, h3 code {
+	text-transform: none;
+}
+
+.reveal pre {
+	box-shadow: none;
+}
+
+.reveal h2 { font-size: 1.6em; }
+}
+
+.block em {
+	display: block;
+}

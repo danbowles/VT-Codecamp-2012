@@ -4,21 +4,21 @@
 	<head>
 		<meta charset="utf-8">
 		
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Learning to Love JavaScript</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="How I became less intimidated by JavaScript">
+		<meta name="author" content="Dan Bowles">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/idea.css">
 		
 		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<script>
 			// If the query includes 'print-pdf' we'll use the PDF print sheet
@@ -40,249 +40,477 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>
+						<span>Learning</span>
+						<span class="left">to <span class="heart">Love</span></span>
+						<span>JavaScript</span>
+					</h1>
+					<h3><code><b>var</b> subTitle = null;</code></h3>
 				</section>
 				
 				<section>
-					<h2>Heads Up</h2>
+					<h2>Who's this guy?</h2>
+					<ul>
+						<li>Developer on the Web Architecture team at Dealer.com</li>
+						<li>I love building things - be it with bricks or code</li>
+						<li>3 year-old Vermonter</li>
+						<li>I have too many cats</li>
+						<li>I will <em>never</em> have too many LEGO bricks</li>
+					</ul>
+					<hr/>
 					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with 
-						support for CSS 3D transforms to see it in its full glory.
+						<i><small><a href="http://danbowles.com">DanBowles.com</a> | <a href="http://twitter.com/danbowles">@danbowles</a> | <a href="http://github.com/danbowles">Github</a></small></i>
 					</p>
-					<p>
-						<i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-					</p>
+				</section>
 
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li class="fragment">Why This Talk?</li>
+						<li class="fragment">A (likely quite brief) History</li>
+						<li class="fragment">JavaScript is everywhere</li>
+						<li class="fragment">What I love (so far)</li>
+						<li class="fragment">The future of JavaScript</li>
+						<li class="fragment">Resources I love.</li>
+					</ul>
 					<aside class="notes">
 						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
 					</aside>
 				</section>
-				
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#/2/1">down</a>.
-						</p>
-						<a href="#/2/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
 
 				<section>
-					<h2>Holistic Overview</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview!
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
+					<h2>Why This Talk?</h2>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li>"Jack of All Trades, Master of None"</li>
+						<li>Tired of "programming" by means of downloading plug-ins</li>
+						<li>Started reading <a href="http://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X">JavaScript Web Applications</a> by <a href="http://alexmaccaw.com/">Alex MacCaw</a>
+							<ul>
+								<li>Helped me understand what I didn't know</li>
+							</ul>
+						</li>
+						<li>Motivation to deep-dive into quirks and power of JavaScript</li>
+						<li>Constantly need to learn</li>
 					</ul>
 				</section>
-				
+
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
+					<section>
+						<h2>History</h2>
+						<em>Yea..no time.  Told you it was brief.</em>
+					</section>
 				</section>
 
-				<section data-markdown>
-					## Markdown support
+				<section>
+					<h2>JavaScript is Everywhere</h2>
+					<ul>
+						<li>On the client
+							<ul>
+								<li>Desktop Web Browsers</li>
+								<li>Mobile Browsers</li>
+							</ul>
+						</li>
+						<li>On the server
+							<ul>
+								<li><a href="http://nodejs.org">Node</a>, <a href="https://developer.mozilla.org/en-US/docs/Rhino">Rhino</a>, etc</li>
+							</ul>
+						</li>
+						<li>In your applications<sup><small>1</small></sup>
+							<ul>
+								<li>Adobe Flash, Adobe Flex - ActionScript 3 (<em>ES3</em>)</li>
+								<li>Adobe Acrobat - JavaScript 1.7 (<em>ES3</em>)</li>
+								<li>Adobe CS - ExtendScript (<em>ES3</em>)</li>
+							</ul>
+						</li>
+					</ul>
+					<hr/>
+					<small>[1 Source: <a href="http://en.wikipedia.org/wiki/ECMAScript">Wikipedia</a>]</small>
+				</section>
+
+				<section>
+					<h2>What I love (so far)</h2>
+					<ul>
+						<li>Everything is an object</li>
+						<li>Functions and Closures</li>
+						<li><code>this</code> and Scope</li>
+						<li>Mutability and Patterns</li>
+						<li>Prototypes <code>(!inheritance)</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Everyting is an Object</h2>
+						<pre><code>{} instanceof Object;			// true
+[] instanceof Object;			// true
+(function() {}) instanceof Object;	// true</code></pre>
+						<pre><code>function Presentation() {
+  this.isAwesome = true;
+}
+
+alert((new Presentation()) instanceof Object); // true
+alert((new Presentation()) instanceof Presentation); // true
+alert(Object.hasOwnProperty('isAwesome')); // false
+				
+Object.isAwesome = "true?";
+alert(Object.hasOwnProperty('isAwesome')); // true</code></pre>
+					</section>
+					<section>
+						<h2>Wait..</h2>
+						<p>You can change built-in objects, like <code>Object</code>?</p>
+						<p><em>You can change anything in JavaScript - more on that in a bit</em></p>
+					</section>
+				</section>
+
+				<section>
 					
-					For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-					<pre><code contenteditable style="margin-top: 20px;">&lt;section data-markdown&gt;
-  ## Markdown support
-
-  For those of you who like that sort of thing. 
-  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-&lt;/section&gt;
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a> -
-						<a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a> -
-						<a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a> -
-						<a href="http://lab.hakim.se/reveal-js/?transition=linear">Linear</a>
-					</p>
-				</section>
-
-				<section>
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="http://lab.hakim.se/reveal-js/?theme=sky">Sky</a> -
-						<a href="http://lab.hakim.se/reveal-js/?theme=beige">Beige</a> -
-						<a href="http://lab.hakim.se/reveal-js/?theme=simple">Simple</a> -
-						<a href="http://lab.hakim.se/reveal-js/">Default</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This lets you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#/7/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+					<section>
+						<h2>Functions and Closures</h2>
+						<p>Closures simply "close" around, and have access to, the context in which they were defined</p>
+						<pre><code>function getCallCount() {
+  var count = 0;
+  return function() { alert(++count); };
+}
+var callCount = getCallCount();
+callCount();
+callCount();</code></pre>
 					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#/7/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#/7/0" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
+					<section>
+						<h2>A bit more crazy..</h2>
+						<pre><code>function Widget(name) {
+  var _origName = name,
+    widgetName = "VTCC." + name;
+
+  this.notAccessible = "Oh Noes!";
+  
+  var getId = function() {
+    return name + "_" + (new Date()).getMilliseconds();
+  };
+
+  return {
+    id: getId(),
+    getName: function(orig) { 
+      return orig ? _origName : widgetName; 
+    }
+  };
+}
+
+var myWidget = new Widget("Calendar");
+
+alert(myWidget.notAccessible);
+alert(myWidget.id);
+alert(myWidget.getName(true));
+alert(myWidget.getName());</code></pre>
 					</section>
 				</section>
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
+					<section>
+						<h2><code>this</code> and Scope</h2>
+						<code>this</code> is <i>dynamic</i>.
+						<pre><code>var myWidget = {
+  name: "AwesomeWidget",
+  echo: function() {
+    alert(this.name);
+  }
+};
+
+myWidget.echo();
+myWidget['echo'].call(myWidget);</code></pre>
+						<pre><code>var myObj = {};
+
+function clickCallback() {
+  this.someProp = "somePropVal";
+}
+
+clickCallback(), alert(window.someProp);
+clickCallback.call(myObj), alert(myObj.someProp);</code></pre>
+					</section>
+
+					<section>
+						<h2>Creating Scope</h2>
+						<pre><code>function outer() {
+  var outerVar = 1;
+
+  function inner() {
+    var innerVar = 10;
+
+    return function() {
+      return innerVar + outerVar;
+    }
+  }
+
+  return inner();
+}
+
+var runOuter = outer();
+alert(runOuter()); // 11</code></pre>
+					</section>
+					<section>
+						<h2>Only functions create scope</h2>
+						<p><em>No block-level scoping in JavaScript</em></p>
+						<pre><code>// Won't create scope with if/else/while/for
+function woot() {
+  if(true) {
+  	var b = 3;
+  }
+
+  alert(typeof b); // var b exists in woot(), not 'if'
+}</code></pre>
+					</section>
 				</section>
-				
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-    
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
+					<section>
+						<h2>Mutability</h2>
+						<pre><code>function addAnother(args) {
+  for (property in args) {
+    this[property] = args[property];
   }
 }
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-				
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
+
+var o = {
+  prop: "val"
+};
+
+alert(o["prop"], o.prop);
+
+addAnother.call(o, {another: "val2"});
+
+alert(o.another);
+
+delete o.another;
+
+alert(typeof o.another);</code></pre>
+					</section>
+					<section>
+						<h2>If you can do it...</h2>
+						<p><em>Everyone</em> can do it.</em></p>
+						<pre><code>Array.prototype.clear = function() {
+  this.length = 0;
+  return this;
+}
+
+console.log([1,2,3].clear()); // []
+
+Object.prototype.isArray = function(o) {
+  return (this.prototype.toString.call(o) === '[object Array]');
+}
+Object.isArray({}); // false
+Object.isArray([]); // true</code></pre>
+						<p>Generally not advised that you extend built-in objects</p>
+						<p>Which brings us to...</p>
+					</section>
 				</section>
 
 				<section>
-					<h2>Fragmented Views</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<ol>
-						<li class="fragment"><code>any type</code></li>
-						<li class="fragment"><em>of view</em></li>
-						<li class="fragment"><strong>fragments</strong></li>
-					</ol>
+					<section>
+						<h2>Patterns!</h2>
+						<em>Specifically, object-creation patterns</em>
+						<ul>
+							<li>Many patterns exist, for many areas of JavaScript</li>
+							<li>Caught up in patterns, not focused on fundamentals</li>
+							<li>Apply what works for you and your application</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Module Pattern</h2>
+						<pre><code>APP.util.array = (function() {
+
+  // Dependencies
+  var ao = APP.util.objects;
+
+  var arrToStr = '[object Array]',
+      toStr = Object.prototype.toString;
+  
+  // Private Functions
+
+  // Return Public API
+  return {
+    isArray: function(arr) {
+      return toStr.call(a) === arrToStr;
+    }
+  };
+
+})();</code></pre>
+					</section>
+
+					<section>
+						<h2>Revealing Module Pattern</h2>
+						<pre><code>APP.util.array = (function() {
+
+  // Dependencies
+
+    // Private Members
+  var arrToStr = '[object Array]',
+    toStr = Object.prototype.toString,
+
+    // Private Functions
+    _isArray = function(arr) {
+      return toStr.call(a) === arrToStr;
+    };
+
+  // Return Public API
+  return {
+    isArray: _isArray
+  };
+
+})();</code></pre>
+					</section>
+					<section>
+						<h2>Others</h2>
+						<pre><code>(function( $ ){
+  $.fn.myPluginName = function() {
+    // your plugin logic
+  };
+})( jQuery );</code></pre>
+						<pre><code>define([
+  'jquery',
+  'underscore',
+  'backbone'
+], function($, _, Backbone) {
+
+  // Do stuff
+
+  return ThisObject;
+});</code></pre>
+					</section>
 				</section>
-				
+
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
-						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png" alt="BreakDOM game screenshot">
-					</a>
+					<section>
+						<h2>Prototypes</h2>
+						<ul>
+							<li>Every function has a <code>prototype</code> property</li>
+							<li>Available to all instances of an object</li>
+						</ul>
+					</section>
+					<section>
+						<h2>The constructor pattern</h2>
+						<pre><code>function Person(name) {
+  this.name = name;
+  this.sayName = function() {
+    return alert(this.name);
+  };
+}
+
+var p1 = new Person("John");
+var p2 = new Person("Jane");
+
+alert(p1.sayName === p2.sayName); // false :(</code></pre>
+						<p><em>Problem:</em> 2 copies of <code>sayName</code> are created</p>
+					</section>
+					<section>
+						<h2>Prototype-ified<sup><small>TM</small></sup></h2>
+						<pre><code>function Person() {  
+}
+
+Person.prototype.name = "John";
+Person.prototype.sayName = function() {
+  return alert(this.name);
+};
+
+var p1 = new Person();
+var p2 = new Person();
+
+alert(p1.sayName === p2.sayName); // true :)</code></pre>
+						<p><code>constructor</code> property is set to <code>Person() {...}</code></p>
+						<p>Accessing <code>sayName</code> is a two-step process.</p>
+						<ol>
+							<li>See if it exists on the instance</li>
+							<li>See if it exists on the prototype</li>
+						</ol>
+					</section>
+					<section>
+						<h2>The Other Guys</h2>
+						<pre class="half"><code>class Shape {
+  // public, static, private
+}
+
+class Circle extends Shape {
+  // radius, area, etc
+}</code></pre>
+						<pre class="half"><code>function Shape() {}
+Shape.prototype.name = "Awesome Shape";
+
+function Circle() {}
+Circle.prototype = new Shape();
+
+var c = new Circle();
+
+alert(c.name); // "Awesome Shape"</code></pre>
+					</section>
 				</section>
-				
+
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
+					<section>
+						<h2>The Future of JavaScript</h2>
+						<em>Namely: ECMAScript 6</em>
+					</section>
+					<section>
+						<h2>The Big Change(s)</h2>
+						<em>Modules</em>
+						<pre><code>module math {
+  export function sum(x, y) {
+    return x + y;
+  }
+  export var pi = 3.141593;
+}
+
+import {sum, pi} from math;
+alert(sum(pi,pi));</code></pre>
+					</section>
+					<section>
+						<h2>The Big Change(s)</h2>
+						<em>Class Syntax</em>
+						<pre><code>class Point extends Base {
+  constructor(x,y) {
+    super();
+    this[px] = x, this[py] = y;
+    this.r = function() { return Math.sqrt(x*x + y*y); }
+  }
+  get x() { return this[px]; }
+  get y() { return this[py]; }
+  proto_r() { return Math.sqrt(this[px] * this[px] +
+      this[py] * this[py]); }
+  equals(p) { return this[px] === p[px] &&
+      this[py] === p[py]; }
+}</code></pre>
+					</section>
+
+					<section>
+						<h2>Other Changes</h2>
+						<pre><code>// Default variables
+function f(x, y=1, z=0) {}
+
+// Iterators
+for (var [key, val] of items(x)) { alert(key + ',' + val); }
+
+// Rest
+function g(i, j, ...r) { return r.slice(i, j); }</code></pre>
+						<hr/>
+						<small><em>One-pager: <a href="http://espadrine.github.com/New-In-A-Spec/es6/">New in a Spec</a></em> | <em>Full Spec: <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts">[Draft] ECMAScript Edition 6</a></em></small>
+					</section>
 				</section>
-				
+
 				<section>
-					<h2>Stellar Links</h2>
+					<h2>Resources I love</h2>
 					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+						<li><a href="http://reddit.com/r/javascript">r/JavaScript</a></li>
+						<li><a href="http://backbonejs.org/docs/backbone.html">Annotated Backbone.js source</a></li>
+						<li><a href="https://github.com/addyosmani/todomvc">TodoMVC</a></li>
+						<li><a href="http://jsfiddle.net">jsFiddle</a></li>
+						<li><a href="http://www.amazon.com/Professional-JavaScript-Developers-Nicholas-Zakas/dp/1118026691/ref=sr_1_13?tag=nczonline-20">Professional JavaScript For Web Developers</a></li>
+						<li><a href="http://shop.oreilly.com/product/9780596806767.do">JavaScript Patterns</a></li>
+						<li><a href="http://addyosmani.com/blog/ecmascript-6-resources-for-the-curious-javascripter/">ES6 Resources</a></li>
 					</ul>
 				</section>
-				
 				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
+					<h1>Questions?</h1>
 				</section>
+				<section>
+					<h1>Thank You!</h1>
+				</section>
+
 			</div>
 
 			<!-- The navigational controls UI -->
@@ -310,8 +538,8 @@ function linkify( selector ) {
 				progress: true,
 				history: true,
 				
-				theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+				theme: Reveal.getQueryHash().theme || 'simple', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/linear(2d)
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
