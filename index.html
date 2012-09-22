@@ -61,21 +61,21 @@
 					<p>
 						<i><small><a href="http://danbowles.com">DanBowles.com</a> | <a href="http://twitter.com/danbowles">@danbowles</a> | <a href="http://github.com/danbowles">Github</a></small></i>
 					</p>
+					<aside class="notes">
+						Transitioned from HTML/CSS to JavaScript and improving the perfomance on our sites
+					</aside>
 				</section>
 
 				<section>
 					<h2>Agenda</h2>
 					<ul>
-						<li class="fragment">Why This Talk?</li>
-						<li class="fragment">A (likely quite brief) History</li>
+						<li class="fragment">Why this talk?</li>
+						<li class="fragment">A (likely quite brief) history</li>
 						<li class="fragment">JavaScript is everywhere</li>
 						<li class="fragment">What I love (so far)</li>
 						<li class="fragment">The future of JavaScript</li>
 						<li class="fragment">Resources I love.</li>
 					</ul>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
 				</section>
 
 				<section>
@@ -91,6 +91,12 @@
 						<li>Motivation to deep-dive into quirks and power of JavaScript</li>
 						<li>Constantly need to learn</li>
 					</ul>
+					<aside class="notes">
+						<ul>
+							<li>Felt like I knew enough of a few things, but not a lot of one thing.</li>
+							<li>Also a Visual Person, hence the love of the web/UIs</li>
+						</ul>
+					</aside>
 				</section>
 
 				<section>
@@ -135,13 +141,18 @@
 						<li>Mutability and Patterns</li>
 						<li>Prototypes <code>(!inheritance)</code></li>
 					</ul>
+					<aside class="notes">
+						<ul>
+							<li>The "bang inheritance" is a bit of a lie, but not inheritance in the traditional sense</li>
+						</ul>
+					</aside>
 				</section>
 
 				<section>
 					<section>
 						<h2>Everyting is an Object</h2>
-						<pre><code>{} instanceof Object;			// true
-[] instanceof Object;			// true
+						<pre><code>({}) instanceof Object;			// true
+([]) instanceof Object;			// true
 (function() {}) instanceof Object;	// true</code></pre>
 						<pre><code>function Presentation() {
   this.isAwesome = true;
@@ -177,29 +188,29 @@ callCount();</code></pre>
 					<section>
 						<h2>A bit more crazy..</h2>
 						<pre><code>function Widget(name) {
-  var _origName = name,
-    widgetName = "VTCC." + name;
+	var _origName = name,
+		widgetName = "VTCC." + name;
 
-  this.notAccessible = "Oh Noes!";
-  
-  var getId = function() {
-    return name + "_" + (new Date()).getMilliseconds();
-  };
+	this.notAccessible = "Oh Noes!";
+	
+	var getId = function() {
+		return name + "_" + (new Date()).getMilliseconds();
+	};
 
-  return {
-    id: getId(),
-    getName: function(orig) { 
-      return orig ? _origName : widgetName; 
-    }
-  };
+	return {
+		id: getId(),
+		getName: function(orig) { 
+			return orig ? _origName : widgetName; 
+		}
+	};
 }
 
 var myWidget = new Widget("Calendar");
 
-alert(myWidget.notAccessible);
-alert(myWidget.id);
-alert(myWidget.getName(true));
-alert(myWidget.getName());</code></pre>
+alert(myWidget.notAccessible); // undefined
+alert(myWidget.id); // Calendar_123
+alert(myWidget.getName(true)); // Calendar
+alert(myWidget.getName()); // VTCC.Calendar</code></pre>
 					</section>
 				</section>
 
@@ -207,7 +218,9 @@ alert(myWidget.getName());</code></pre>
 					<section>
 						<h2><code>this</code> and Scope</h2>
 						<code>this</code> is <i>dynamic</i>.
-						<pre><code>var myWidget = {
+						<pre><code>alert(this); // the Window/Global NS
+
+var myWidget = {
   name: "AwesomeWidget",
   echo: function() {
     alert(this.name);

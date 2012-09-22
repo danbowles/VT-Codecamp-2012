@@ -59,8 +59,8 @@ alert(obj.prop);
 alert(obj.changedBy);
 
 // Everything is an object
-{} instanceof Object;				// true
-[] instanceof Object;				// true
+({}) instanceof Object;				// true
+([]) instanceof Object;				// true
 (function() {}) instanceof Object;	// true
 
 function Presentation() {
@@ -104,17 +104,19 @@ function Widget(name) {
 
 var myWidget = new Widget("Calendar");
 
-alert(myWidget.notAccessible);
-alert(myWidget.id);
-alert(myWidget.getName(true));
-alert(myWidget.getName());
+alert(myWidget.notAccessible); // undefined
+alert(myWidget.id); // Calendar_123
+alert(myWidget.getName(true)); // Calendar
+alert(myWidget.getName()); // VTCC.Calendar
 
 alert(typeof getId); // undefined
-alert(typeof _private); // undefined
+alert(typeof _origName); // undefined
 
 // this
 
 // 1
+alert(this); // the Window/Global NS
+
 var myWidget = {
   name: "AwesomeWidget",
   echo: function() {
